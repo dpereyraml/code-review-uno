@@ -24,3 +24,9 @@ func (s *VehicleDefault) AddVehicle(v *internal.Vehicle) (err error) {
 	err = s.rp.AddVehicle(v)
 	return
 }
+
+// GetByColorAndYear is a method that returns vehicles by color and year
+func (s *VehicleDefault) GetByColorAndYear(color string, year int) (v map[int]internal.Vehicle, err error) {
+	v, err = s.rp.GetByColorAndYear(color, year)
+	return
+}
